@@ -1,74 +1,86 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-
+  "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Hasher Haberdasher</title>
-	<meta name="author" content="Dennis Mojado">
-	<!-- Date: 2009-10-23 -->
-	<script language="JavaScript" src="md5.js"></script>
-	<script language="JavaScript" src="sha1.js"></script>
-	<script language="JavaScript" src="sha256.js"></script>
-        <script language="JavaScript" src="sha512.js"></script>
-	<script language="JavaScript" src="ripemd160.js"></script>
-        <script language="JavaScript" src="whirlpool.js"></script>
-	<script language="JavaScript" src="hash.js"></script>
-        <script language="JavaScript" src="showhide.js"></script>
-	
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Hasher Haberdasher</title>
+    <meta name="author" content="Dennis Mojado">
+    <!-- Date: 2009-10-23 -->
+    <script language="JavaScript" src="md5.js"></script>
+    <script language="JavaScript" src="sha1.js"></script>
+    <script language="JavaScript" src="sha256.js"></script>
+    <script language="JavaScript" src="sha512.js"></script>
+    <script language="JavaScript" src="ripemd160.js"></script>
+    <script language="JavaScript" src="whirlpool.js"></script>
+    <script language="JavaScript" src="hash.js"></script>
+    <script language="JavaScript" src="showhide.js"></script>
     <style type="text/css">
-<!--
-.style1 {font-family: Arial, Helvetica, sans-serif}
-.style2 {font-family: Arial, Helvetica, sans-serif; font-size: 0.7em}
--->
+      <!--
+        .style1 {font-family: Arial, Helvetica, sans-serif}
+        .style2 {font-family: Arial, Helvetica, sans-serif; font-size: 0.7em}
+        -->
     </style>
-</head>
-<body onload="hidediv();">
-<span class="style1">
-  <h1>Simple Text Hasher</h1>
-Enter the text that you wish to hash. This is all done client-side using JavaScript, so don't worry about data recording. However, see the fine print<sup><a href="javascript:showdiv()">1</a></sup>.<br>
-  <br>
-  <input name="cleartext_input" type="text" id="cleartext_input" size="52">
-  </label>
-<input type="button" name="hashbutton" id="hashbutton" value="Hash!" 
-  onclick="hashallvalues();">
-  <input type="reset" value="Reset" onclick="clearallvalues();">
-  <label> <br>
-  <br>
-  </label>
-</span>
-  <table width="775" border="0" cellspacing="2">
-    <tr>
-      <th width="100" class="style1" scope="row"><div align="left">md5</div></th>
-      <td width="674" class="style1"><input name="md5" type="text" id="md5hash" size="92"></td>
-    </tr>
-    <tr>
-      <th class="style1" scope="row"><div align="left">sha1</div></th>
-      <td class="style1"><input name="sha1" type="text" id="sha1hash" size="92"></td>
-    </tr>
-    <tr>
-      <th class="style1" scope="row"><div align="left">sha256</div></th>
-      <td class="style1"><input name="sha256" type="text" id="sha256hash" value="" size="92"></td>
-    </tr>
-    <tr>
-      <th class="style1" scope="row"><div align="left">RIPEMD160</div></th>
-      <td class="style1"><input name="ripemd-160" type="text" id="ripemd160hash" value="" size="92"></td>
-    </tr>
-
-    <tr>
-      <th class="style1" scope="row"><div align="left">sha512</div></th>
-      <td class="style1"><textarea name="sha512" cols="80" id="sha512hash"></textarea></td>
-    </tr>
-    <tr>
-      <th class="style1" scope="row"><div align="left">whirlpool</div></th>
-      <td class="style1"><label>
-        <textarea name="whirlpool" cols="80" id="whirlpoolhash"></textarea>
-      </label></td>
-    </tr>
-  </table>
-  <p class="style1">&nbsp;</p>
-  <div id="hideShow"><p class="style2"><sup>1</sup>By using this page you agree that Dennis Mojado and affiliates in no event shall be liable for any damage arising, directly or indirectly, from the use of the information contained on this web page including damages arising from inaccuracies, omissions or errors. This information is provided 'as is' without warranty of any kind. These algorithms were not verified, nor are they deemed in any way commercial or "production worthy". [<a href="javascript:hidediv();">Hide</a>]</p></div>
-<p class="style1">&nbsp; </p>
-<p class="style1">This page was prompted by the creation of a <a href="http://isc.sans.org/tools/reversehash.html" target="_blank">reverse-hash calculator</a> by isc.sans.org.</p>
-</body>
+  </head>
+  <body onload="hidediv();">
+    <span class="style1">
+      <h1>Simple Text Hasher</h1>
+      Enter the text that you wish to hash. This is all done client-side using JavaScript, so don't worry about data recording. However, see the fine print<sup><a href="javascript:showdiv()">1</a></sup>.<br>
+      <br>
+      <input name="cleartext_input" type="text" id="cleartext_input" size="52">
+      </label>
+      <input type="button" name="hashbutton" id="hashbutton" value="Hash!" 
+        onclick="hashallvalues();">
+      <input type="reset" value="Reset" onclick="clearallvalues();">
+      <label> <br>
+      <br>
+      </label>
+    </span>
+    <table width="775" border="0" cellspacing="2">
+      <tr>
+        <th width="100" class="style1" scope="row">
+          <div align="left">md5</div>
+        </th>
+        <td width="674" class="style1"><input name="md5" type="text" id="md5hash" size="92"></td>
+      </tr>
+      <tr>
+        <th class="style1" scope="row">
+          <div align="left">sha1</div>
+        </th>
+        <td class="style1"><input name="sha1" type="text" id="sha1hash" size="92"></td>
+      </tr>
+      <tr>
+        <th class="style1" scope="row">
+          <div align="left">sha256</div>
+        </th>
+        <td class="style1"><input name="sha256" type="text" id="sha256hash" value="" size="92"></td>
+      </tr>
+      <tr>
+        <th class="style1" scope="row">
+          <div align="left">RIPEMD160</div>
+        </th>
+        <td class="style1"><input name="ripemd-160" type="text" id="ripemd160hash" value="" size="92"></td>
+      </tr>
+      <tr>
+        <th class="style1" scope="row">
+          <div align="left">sha512</div>
+        </th>
+        <td class="style1"><textarea name="sha512" cols="80" id="sha512hash"></textarea></td>
+      </tr>
+      <tr>
+        <th class="style1" scope="row">
+          <div align="left">whirlpool</div>
+        </th>
+        <td class="style1"><label>
+          <textarea name="whirlpool" cols="80" id="whirlpoolhash"></textarea>
+          </label>
+        </td>
+      </tr>
+    </table>
+    <p class="style1">&nbsp;</p>
+    <div id="hideShow">
+      <p class="style2"><sup>1</sup>By using this page you agree that Dennis Mojado and affiliates in no event shall be liable for any damage arising, directly or indirectly, from the use of the information contained on this web page including damages arising from inaccuracies, omissions or errors. This information is provided 'as is' without warranty of any kind. These algorithms were not verified, nor are they deemed in any way commercial or "production worthy". [<a href="javascript:hidediv();">Hide</a>]</p>
+    </div>
+    <p class="style1">&nbsp; </p>
+    <p class="style1">This page was prompted by the creation of a <a href="http://isc.sans.org/tools/reversehash.html" target="_blank">reverse-hash calculator</a> by isc.sans.org.</p>
+  </body>
 </html>
